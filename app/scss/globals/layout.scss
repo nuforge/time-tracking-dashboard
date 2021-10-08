@@ -1,0 +1,10 @@
+@use "../utils" as *;
+
+.container {
+    width: rem(375);
+    margin: 0 auto;
+
+    @include breakpoint(large) {
+        width: rem(1440);
+    }
+}

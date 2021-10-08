@@ -1,0 +1,23 @@
+@use "../utils/" as *;
+
+:root {    
+    --border-radius: 10px;
+}
+
+.side {
+    background: var(--dark-blue);
+    border-radius: var(--border-radius);
+
+    &__profile {
+        background: var(--desaturated-blue);
+        border-radius: var(--border-radius);
+
+    }
+
+    &__image {
+        width: rem(80);
+        height: rem(80);
+        border: 3px solid #fff;
+        border-radius: 50%;
+    }
+}
