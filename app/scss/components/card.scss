@@ -8,11 +8,35 @@
     border-radius: rem(10);
     position: relative;
 
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    h2 {
+        color: var(--white);
+    }
+    &__icon {
+        justify-self: end;
+    }
+
+    &__hours {
+        font-size: rem(24);
+        font-weight: 300;
+        color: var(--white);
+    }
+
+    &__previous {
+        
+        justify-self: end;
+    }
 
     &--work::before {
         background: var(--orange);
         background-image: url('../images/icon-work.svg');
+    }
+    &--play::before {
+        background: var(--soft-blue);
+        background-image: url('../images/icon-play.svg');
     }
 
     &::before {
