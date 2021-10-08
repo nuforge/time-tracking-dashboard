@@ -7,7 +7,7 @@
 .side {
     background: var(--dark-blue);
     border-radius: var(--border-radius);
-    grid-row: 1 / end;
+    grid-row: 1 / 3;
 
     &__profile {
         display: flex;
@@ -35,8 +35,9 @@
 
     h1 {
         color: #fff;
-        @include breakpoint-down(large) {
-            font-size: rem(24);
+        font-size: rem(24);
+        @include breakpoint(large) {
+            font-size: rem(40);
         }
     }
 }
