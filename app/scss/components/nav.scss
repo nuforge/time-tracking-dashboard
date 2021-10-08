@@ -2,10 +2,19 @@
 
 nav {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    gap: rem(24);
+    padding: rem(30);
+    justify-content: space-between;
+
+    @include breakpoint(large) {
+        flex-direction: column;
+    }
 
     a {
-        color: var(--very-light-blue);
+        color: var(--desaturated-blue);
+    }
+
+    a:hover {
+        color: var(--pale-blue);
     }
 }
