@@ -7,6 +7,7 @@
 .side {
     background: var(--dark-blue);
     border-radius: var(--border-radius);
+    grid-row: 1 / end;
 
     &__profile {
         display: flex;
@@ -15,6 +16,10 @@
         padding: rem(30);
         align-items: center;
         gap: rem(18);
+        @include breakpoint(large) {
+          align-items: start;
+          flex-direction: column;
+        }
     }
 
     &__image {

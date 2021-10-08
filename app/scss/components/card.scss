@@ -1,7 +1,7 @@
 @use "../utils/" as *;
 
 .card {
-    margin-top: rem(50);
+    margin-top: rem(36);
     padding: rem(18);
 
     background: var(--dark-blue);
@@ -23,11 +23,19 @@
         font-size: rem(24);
         font-weight: 300;
         color: var(--white);
+        @include breakpoint(large) {
+          font-size: rem(36);
+          margin-bottom: rem(18);
+        }
     }
 
     &__previous {
-        
         justify-self: end;
+
+        @include breakpoint(large) {
+          justify-self: start;
+          grid-row: start/end;
+        }
     }
 
     &--work::before {
@@ -37,6 +45,22 @@
     &--play::before {
         background: var(--soft-blue);
         background-image: url('../images/icon-play.svg');
+    }
+    &--study::before {
+        background: var(--light-red);
+        background-image: url('../images/icon-study.svg');
+    }
+    &--exercise::before {
+        background: var(--lime-green);
+        background-image: url('../images/icon-exercise.svg');
+    }
+    &--social::before {
+        background: var(--violet);
+        background-image: url('../images/icon-social.svg');
+    }
+    &--self-care::before {
+        background: var(--soft-orange);
+        background-image: url('../images/icon-self-care.svg');
     }
 
     &::before {

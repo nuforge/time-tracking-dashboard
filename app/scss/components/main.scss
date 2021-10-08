@@ -1,4 +1,15 @@
-.main {
-    display: grid;
+@use "../utils/" as *;
 
+.main {
+
+    @include breakpoint(large) {
+      display: grid;
+
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr 1fr;
+      gap: rem(18);
+
+      .side {
+      }
+    }
 }
